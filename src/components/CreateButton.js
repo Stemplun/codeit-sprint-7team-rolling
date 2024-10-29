@@ -25,11 +25,13 @@ function CreateButton({ from, content, relation, font, profileImageURL }) {
               "Content-Type": "application/json",
             },
             body: JSON.stringify({
+              team: "11-7",
+              recipientId: id,
               sender: from,
+              profileImageURL,
               relationship: relation,
               content,
               font,
-              profileImageURL,
             }),
           }
         );
